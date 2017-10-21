@@ -65,7 +65,11 @@ public class Cuenta {
                             case 2:{
                                 System.out.println("Cantidad: ");
                                 double cantidad = datos.nextDouble();
-                                cuentas[num_cuenta].setCantidad(cantidad);
+                                if(cantidad>0)
+                                    cuentas[num_cuenta].setCantidad(cantidad);
+                                else
+                                    System.out.println("No puede ingresar una cantidad menor a 0!");
+                                break;
                             }
                         }
                     }
